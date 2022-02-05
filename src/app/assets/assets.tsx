@@ -8,3 +8,23 @@ export const CAR_PNG = require("./car.png");
 export const DOC_PNG = require("./doc.png");
 export const PIGGY_PNG = require("./piggy.png");
 export const LOCK_PNG = require("./lock.png");
+
+// ************ RESTAURANT ASSETS ************* //
+export const CALL_HOME = require("./call_home.png");
+export const LOCATION_ICON = require("./fi-rr-marker.png");
+export const CART_ICON = require("./fi-rr-shopping-cart.png");
+export const SEARCH_ICON = require("./Search_home.png");
+export const BANNER = require("./banner.png");
+export const BACK_BANNER = require("./back-track.png");
+export const FORWARD_BANNER = require("./forward-track.png");
+export const RED_DOT = require("./redDot.png");
+export const GREEN_DOT = require("./greenDot.png");
+export const TOGGLE_ICON = require("./toggleIcon.png");
+export const STAR_ICON = require("./star.png");
+export const HEART_ICON = require("./heart.png");
+export const PRODUCT_ICON = require("./product.png");
+export const CART_EMPTY_ICON = require("./cart_empty.png");
+export const BOTTOM_BANNER = require("./bottomBanner.png");
+export const GOOGLE_PLAY_ICON = require("./googlePlayIcon.png");
+export const APP_STORE_ICON = require("./appStoreIcon.png");
+export const FOOTER_COUPON_ICON = require("./footerCoupon.png");

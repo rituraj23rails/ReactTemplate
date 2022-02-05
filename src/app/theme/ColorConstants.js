@@ -15,3 +15,10 @@ export default colors = {
     success: '#28a745',
     error: '#dc3545',
 };
+
+export const FONTS =  {
+    GTWalsheimProBold: 'GTWalsheimPro-Bold',
+    GTWalsheimProLight: 'GTWalsheimPro-Light',
+    GTWalsheimProMedium: 'GTWalsheimPro-Medium',
+    GTWalsheimProRegular: 'GTWalsheimPro-Regular',
+}
