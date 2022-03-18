@@ -2,12 +2,12 @@ import React, { useRef } from 'react';
 import RestaurantNav from '../RestaurantNav/RestaurantNav';
 import Carousel from 'react-elastic-carousel';
 import './RestaurantHome.css';
-import { APP_STORE_ICON, BACK_BANNER, BANNER, BOTTOM_BANNER, CART_EMPTY_ICON, FOOTER_COUPON_ICON, FORWARD_BANNER, GOOGLE_PLAY_ICON, GREEN_DOT, HEART_ICON, PRODUCT_ICON, RED_DOT, STAR_ICON, TOGGLE_ICON } from '../../assets/assets';
+import { APP_STORE_ICON, BACK_BANNER, BANNER, BOTTOM_BANNER, CART_EMPTY_ICON, FOOTER_COUPON_ICON, FORWARD_BANNER, GOOGLE_PLAY_ICON, GREEN_DOT, HEART_ICON, PRODUCT_ICON, RED_DOT, STAR_ICON, TOGGLE_ICON, ALARM_SVG, DOC_SVG } from '../../assets/assets';
+import CustomSVG from '../CustomComponents/CustomSVG';
 
-const RestaurantHome = () => {
-
+const RestaurantHome = (props: any) => {
+    
     let carousel: any = useRef();
-
     const renderPaginationDots = (pages: any, activePage: any, onClick: any) => {
         return (
             <div className='dotsRow'>
@@ -201,10 +201,21 @@ const RestaurantHome = () => {
             </div>
         )
     }
-    
+
+    const renderSVGComponents = () => {
+        return (
+            <>
+                <CustomSVG component={<ALARM_SVG />} />
+                <CustomSVG component={<DOC_SVG />} />
+                <ALARM_SVG width="100px" height="100px" />
+                <DOC_SVG width="100px" height="100px" />
+            </>
+        )
+    }
+
     return (
         <div className='mainContainer'>
-            <RestaurantNav />
+            <RestaurantNav  {...props}/>
             {renderBannerView()}
             {renderMidView()}
             {renderFooterContainer()}

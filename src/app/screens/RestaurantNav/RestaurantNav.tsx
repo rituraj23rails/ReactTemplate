@@ -2,7 +2,7 @@ import React from 'react';
 import { CALL_HOME, CART_ICON, LOCATION_ICON, SEARCH_ICON } from '../../assets/assets';
 import './RestaurantNav.css';
 
-const RestaurantNav = () => {
+const RestaurantNav = (props: any) => {
     return (
         <div className='restaurantNavContainer'>
             <h1 className='restaurantBrandH1'>Studio Store</h1>
