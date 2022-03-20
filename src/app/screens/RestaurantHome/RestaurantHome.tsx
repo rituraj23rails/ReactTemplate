@@ -1,14 +1,42 @@
-import React, { useRef } from 'react';
+import React, { Component, useRef } from 'react';
 import RestaurantNav from '../RestaurantNav/RestaurantNav';
 import Carousel from 'react-elastic-carousel';
 import './RestaurantHome.css';
 import { APP_STORE_ICON, BACK_BANNER, BANNER, BOTTOM_BANNER, CART_EMPTY_ICON, FOOTER_COUPON_ICON, FORWARD_BANNER, GOOGLE_PLAY_ICON, GREEN_DOT, HEART_ICON, PRODUCT_ICON, RED_DOT, STAR_ICON, TOGGLE_ICON, ALARM_SVG, DOC_SVG } from '../../assets/assets';
 import CustomSVG from '../CustomComponents/CustomSVG';
 
-const RestaurantHome = (props: any) => {
-    
-    let carousel: any = useRef();
-    const renderPaginationDots = (pages: any, activePage: any, onClick: any) => {
+
+export interface Props {
+    navigation: any;
+    id: string;
+}
+
+interface S {
+}
+
+interface SS {
+    id: any;
+}
+
+
+class RestaurantHome extends Component<Props, S, SS> {
+    carousel: any = null;
+    constructor(props: any) {
+        super(props);
+        this.state = {
+
+        };
+    };
+
+    componentDidMount = async () => {
+        let data = await localStorage.getItem("commonSettings");
+    }
+
+    componentWillUnmount = () => {
+
+    }
+
+    renderPaginationDots = (pages: any, activePage: any, onClick: any) => {
         return (
             <div className='dotsRow'>
                 {pages.map((itemPage: any) => {
@@ -21,7 +49,7 @@ const RestaurantHome = (props: any) => {
         )
     }
 
-    const renderBannerView = () => {
+    renderBannerView = () => {
         let bannerData = [1, 1, 1, 1, 1];
         return (
             <Carousel
@@ -30,22 +58,20 @@ const RestaurantHome = (props: any) => {
                 isRTL={false}
                 showArrows={false}
                 focusOnSelect={false}
-                //@ts-ignore
-                renderPagination={({ pages, activePage, onClick }) => { return renderPaginationDots(pages, activePage, onClick) }}
-                //@ts-ignore
-                ref={carousel}>
-                {bannerData.map((bannerItem: any) => {
+                renderPagination={({ pages, activePage, onClick }) => { return this.renderPaginationDots(pages, activePage, onClick) }}
+                ref={this.carousel}>
+                {bannerData.map((bannerItem: any, index: any) => {
                     return (
-                        <div className='bannerContainer'>
+                        <div className='bannerContainer' key={index}>
                             <img src={BANNER} alt='BANNER' className='bannerImage' />
                             <div className="bannerData">
-                                <img onClick={() => carousel.current.slidePrev()} src={BACK_BANNER} alt='BACK_BANNER' className='backwardIcon' />
+                                <img onClick={() => this.carousel.current.slidePrev()} src={BACK_BANNER} alt='BACK_BANNER' className='backwardIcon' />
                                 <div className='bannerInternal'>
                                     <h1 className="bannerHeadingH1">50% Off</h1>
                                     <p className="bannerTextP">On your first Order</p>
                                     <button className="orderNowButton">Order Now</button>
                                 </div>
-                                <img onClick={() => carousel.current.slideNext()} src={FORWARD_BANNER} alt='FORWARD_BANNER' className='forwardIcon' />
+                                <img onClick={() => this.carousel.current.slideNext()} src={FORWARD_BANNER} alt='FORWARD_BANNER' className='forwardIcon' />
                             </div>
                         </div>
                     )
@@ -54,15 +80,15 @@ const RestaurantHome = (props: any) => {
         )
     }
 
-    const renderLeftContainer = () => {
-        const menuList = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
+    renderLeftContainer = () => {
+        const menuList = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
         return (
             <div className="leftContainer">
                 <p className='menuText'>Menu</p>
                 <div className="menulist">
-                    {menuList.map((item: any) => {
+                    {menuList.map((item: any, index: any) => {
                         return (
-                            <p className="menuLabel">Veg Pizza (17)</p>
+                            <p className="menuLabel" key={index}>Veg Pizza (17)</p>
                         );
                     })}
                 </div>
@@ -70,8 +96,8 @@ const RestaurantHome = (props: any) => {
         )
     }
 
-    const renderMiddleContainer = () => {
-        const productList = [1,1,1,1,1,1];
+    renderMiddleContainer = () => {
+        const productList = [1, 1, 1, 1, 1, 1];
         return (
             <div className="middleContainer">
                 <div className="recommendedRow">
@@ -90,9 +116,9 @@ const RestaurantHome = (props: any) => {
                         <img src={TOGGLE_ICON} alt="TOGGLE_ICON" className="toggleIcon" />
                     </div>
                 </div>
-                {productList.map((item: any) => {
+                {productList.map((item: any, index: any) => {
                     return (
-                        <div className="cellContainer">
+                        <div className="cellContainer" key={index}>
                             <img src={PRODUCT_ICON} alt="PRODUCT_ICON" className="productIcon" />
                             <div className="rightContainerRow">
                                 <div className="firstRow">
@@ -117,12 +143,13 @@ const RestaurantHome = (props: any) => {
                                 </div>
                             </div>
                         </div>
-                    )})}
+                    )
+                })}
             </div>
         )
     }
-    
-    const renderRightContainer = () => {
+
+    renderRightContainer = () => {
         return (
             <div className="rightContainer">
                 <p className="emptyText">Cart Empty</p>
@@ -136,8 +163,8 @@ const RestaurantHome = (props: any) => {
             </div>
         )
     }
-    
-    const renderDownloadContainer = () => {
+
+    renderDownloadContainer = () => {
         return (
             <div className="downloadContainer">
                 <img src={BOTTOM_BANNER} alt="BOTTOM_BANNER" className="bottomBanner" />
@@ -151,8 +178,8 @@ const RestaurantHome = (props: any) => {
             </div>
         )
     }
-    
-    const renderFooterContainer = () => {
+
+    renderFooterContainer = () => {
         return (
             <div className="footerContainer">
                 <div className="leftFooter">
@@ -183,18 +210,18 @@ const RestaurantHome = (props: any) => {
         )
     }
 
-    const renderMidView = () => {
+    renderMidView = () => {
         return (
             <div className="midContainer">
-                {renderLeftContainer()}
-                {renderMiddleContainer()}
-                {renderRightContainer()}
-                {renderDownloadContainer()}
+                {this.renderLeftContainer()}
+                {this.renderMiddleContainer()}
+                {this.renderRightContainer()}
+                {this.renderDownloadContainer()}
             </div>
         )
     }
 
-    const renderCopyrightContainer = () => {
+    renderCopyrightContainer = () => {
         return (
             <div className="copyrightContainer">
                 <p className="copyrightText">Copyright © 2020 Studio Store, USA. All rights reserved.</p>
@@ -202,7 +229,7 @@ const RestaurantHome = (props: any) => {
         )
     }
 
-    const renderSVGComponents = () => {
+    renderSVGComponents = () => {
         return (
             <>
                 <CustomSVG component={<ALARM_SVG />} />
@@ -213,15 +240,17 @@ const RestaurantHome = (props: any) => {
         )
     }
 
-    return (
-        <div className='mainContainer'>
-            <RestaurantNav  {...props}/>
-            {renderBannerView()}
-            {renderMidView()}
-            {renderFooterContainer()}
-            {renderCopyrightContainer()}
-        </div>
-    )
+    render() {
+        return (
+            <div className='mainContainer'>
+                <RestaurantNav  {...this.props} />
+                {this.renderBannerView()}
+                {this.renderMidView()}
+                {this.renderFooterContainer()}
+                {this.renderCopyrightContainer()}
+            </div>
+        )
+    }
 };
 
 export default RestaurantHome;
