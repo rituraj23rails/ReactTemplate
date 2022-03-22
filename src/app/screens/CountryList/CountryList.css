@@ -1,0 +1,80 @@
+.countryListMainContainer {
+    height: 100vh;
+}
+
+.countryContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.searchedCountryText {
+    background-color: #000;
+    color: #fff;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-size: 25px;
+}
+
+.countryList {
+    margin-top: 100px;
+    height: 600px;
+    overflow: scroll;
+}
+
+.countryCell {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #000;
+    width: 600px;
+    padding: 10px 30px;
+    margin: 0px auto 20px auto;
+}
+
+.fieldValue {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.flagImage {
+    width: 150px;
+    height: 100px;
+}
+
+@media screen and (max-width: 820px) {
+    .searchedCountryText {
+        font-size: 22px;
+    }
+
+    .countryList {
+        margin-top: 100px;
+        height: 100%;
+        overflow: scroll;
+    }
+
+    .countryCell {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .searchedCountryText {
+        font-size: 20px;
+    }
+
+    .countryList {
+        margin-top: 100px;
+        height: 100%;
+        overflow: scroll;
+    }
+
+    .countryCell {
+        width: 300px;
+    }
+}

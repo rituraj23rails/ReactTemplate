@@ -4,10 +4,11 @@ import Carousel from 'react-elastic-carousel';
 import './RestaurantHome.css';
 import { APP_STORE_ICON, BACK_BANNER, BANNER, BOTTOM_BANNER, CART_EMPTY_ICON, FOOTER_COUPON_ICON, FORWARD_BANNER, GOOGLE_PLAY_ICON, GREEN_DOT, HEART_ICON, PRODUCT_ICON, RED_DOT, STAR_ICON, TOGGLE_ICON, ALARM_SVG, DOC_SVG } from '../../assets/assets';
 import CustomSVG from '../CustomComponents/CustomSVG';
+import WithRouter from '../../../WithRouter';
 
 
 export interface Props {
-    navigation: any;
+    navigate: any;
     id: string;
 }
 
@@ -253,4 +254,5 @@ class RestaurantHome extends Component<Props, S, SS> {
     }
 };
 
-export default RestaurantHome;
+export default WithRouter(RestaurantHome);
+export {RestaurantHome};

@@ -1,14 +1,12 @@
 import { defineFeature, loadFeature } from "jest-cucumber"
 import { shallow, ShallowWrapper, configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import RestaurantHome from "../RestaurantHome";
+import {RestaurantHome} from "../RestaurantHome";
 
 configure({adapter: new Adapter()});
 
 const screenProps = {
-    navigation: {
-        navigate: jest.fn(),
-    },
+    navigate: jest.fn(),
     id: "RestaurantHome"
 }
 

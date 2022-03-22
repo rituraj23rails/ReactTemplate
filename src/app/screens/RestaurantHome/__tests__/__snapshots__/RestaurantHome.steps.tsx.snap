@@ -6,11 +6,7 @@ exports[`Restaurant Home Screen User navigates Restaurant Home Screen 1`] = `
 >
   <RestaurantNav
     id="RestaurantHome"
-    navigation={
-      Object {
-        "navigate": [MockFunction],
-      }
-    }
+    navigate={[MockFunction]}
   />
   <Carousel
     autoPlaySpeed={1500}
@@ -1131,11 +1127,7 @@ exports[`Restaurant Home Screen User navigates Restaurant Home Screen 2`] = `
 >
   <RestaurantNav
     id="RestaurantHome"
-    navigation={
-      Object {
-        "navigate": [MockFunction],
-      }
-    }
+    navigate={[MockFunction]}
   />
   <Carousel
     autoPlaySpeed={1500}
