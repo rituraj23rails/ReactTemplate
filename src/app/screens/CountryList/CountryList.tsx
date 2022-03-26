@@ -38,7 +38,7 @@ class CountryList extends Component<Props, S, SS> {
     }
 
     onPressCountryDetails = (item: any) => {
-        this.props.navigate('/countrydetails', { replace: true, state: { countryData: item }});
+        this.props.navigate('/countrydetails', { state: { countryData: item }});
     }
 
     renderCountryList = () => {
