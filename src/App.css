@@ -4,23 +4,3 @@
   padding: 0;
   font-family: 'Encode Sans Expanded', sans-serif;
 }
-
-@font-face {
-  font-family: 'GTWalsheimPro-Light';
-  src: local('GTWalsheimPro-Light'), url(./app/fonts/GTWalsheimPro-Light.ttf) format('opentype');
-}
-
-@font-face {
-  font-family: 'GTWalsheimPro-Regular';
-  src: local('GTWalsheimPro-Regular'), url(./app/fonts/GTWalsheimPro-Regular.ttf) format('opentype');
-}
-
-@font-face {
-  font-family: 'GTWalsheimPro-Medium';
-  src: local('GTWalsheimPro-Medium'), url(./app/fonts/GTWalsheimPro-Medium.ttf) format('opentype');
-}
-
-@font-face {
-  font-family: 'GTWalsheimPro-Bold';
-  src: local('GTWalsheimPro-Bold'), url(./app/fonts/GTWalsheimPro-Bold.ttf) format('opentype');
-}

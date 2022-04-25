@@ -1,6 +1,7 @@
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 
 const WithRouter = (Component: any) => {
+    /* istanbul ignore next */
     const Wrapper = (props: any) => {
         const navigate = useNavigate();
         const params = useParams();

@@ -28,7 +28,6 @@ class CountryDetails extends Component<Props, S, SS> {
     };
 
     componentDidMount = async () => {
-        console.log('@@@ Params =========', this.props.location.state.countryData)
     }
 
     componentWillUnmount = () => {
@@ -42,14 +41,13 @@ class CountryDetails extends Component<Props, S, SS> {
             let response = await fetch(
                 `http://api.weatherstack.com/current?access_key=e32b270172beca34f23673646d8a9b0d&query=${cap}`,
             );
-
+            /* istanbul ignore next */
             let json = await response.json();
+            /* istanbul ignore next */
             this.setState({ weatherData: json.current }, () => {
                 this.setState({ showData: true });
-                console.log('@@@ Weather DATA JSON ============', this.state.weatherData);
             })
         } catch (error) {
-            console.log('@@@ Error Weather Data =========', error);
         }
     }
 
@@ -67,7 +65,7 @@ class CountryDetails extends Component<Props, S, SS> {
                         <p className="dataValue">Latlng: {latlng[0]} {latlng[1]}</p>
                     </div>
                 </div>
-                <button onClick={() => this.onCalculateCapitalWeather()} className="weatherButton">Capital Weather</button>
+                <button data-testid="capitalButtonTestID" onClick={() => this.onCalculateCapitalWeather()} className="weatherButton">Capital Weather</button>
             </div>
         )
     }

@@ -17,6 +17,7 @@ exports[`Country Details Screen User navigates Country Details Screen 1`] = `
     >
       <img
         className="flagIcon"
+        src=""
       />
       <div>
         <p
@@ -27,7 +28,14 @@ exports[`Country Details Screen User navigates Country Details Screen 1`] = `
         <p
           className="dataValue"
         >
+          Capital: 
+          a
+        </p>
+        <p
+          className="dataValue"
+        >
           Population: 
+          1
         </p>
         <p
           className="dataValue"
@@ -41,6 +49,7 @@ exports[`Country Details Screen User navigates Country Details Screen 1`] = `
     </div>
     <button
       className="weatherButton"
+      data-testid="capitalButtonTestID"
       onClick={[Function]}
     >
       Capital Weather
@@ -66,6 +75,7 @@ exports[`Country Details Screen User navigates Country Details Screen 2`] = `
     >
       <img
         className="flagIcon"
+        src=""
       />
       <div>
         <p
@@ -76,7 +86,14 @@ exports[`Country Details Screen User navigates Country Details Screen 2`] = `
         <p
           className="dataValue"
         >
+          Capital: 
+          a
+        </p>
+        <p
+          className="dataValue"
+        >
           Population: 
+          1
         </p>
         <p
           className="dataValue"
@@ -90,6 +107,7 @@ exports[`Country Details Screen User navigates Country Details Screen 2`] = `
     </div>
     <button
       className="weatherButton"
+      data-testid="capitalButtonTestID"
       onClick={[Function]}
     >
       Capital Weather
