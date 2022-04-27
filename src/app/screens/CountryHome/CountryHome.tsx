@@ -59,7 +59,7 @@ class CountryHome extends Component<Props, S, SS> {
         return (
             <div className="formBox">
                 <p className="headingText">Welcome To Country App</p>
-                <input data-testid="textInputTestID" type="text" className='textInputField' value={this.state.countryName} onChange={(event) => this.handleChangeTextInput(event)} />
+                <input data-testid="textInputTestID" type="text" placeholder='Enter Country' className='textInputField' value={this.state.countryName} onChange={(event) => this.handleChangeTextInput(event)} />
                 <button data-testid="submitButtonTestID" onClick={() => this.onSubmitButton()} className="submitButton">SUBMIT</button>
             </div>
         )
