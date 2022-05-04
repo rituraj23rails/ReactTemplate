@@ -16,6 +16,7 @@ exports[`Country Home Screen User navigates Country Home Screen 1`] = `
       className="textInputField"
       data-testid="textInputTestID"
       onChange={[Function]}
+      placeholder="Enter Country"
       type="text"
       value=""
     />
@@ -46,6 +47,7 @@ exports[`Country Home Screen User navigates Country Home Screen 2`] = `
       className="textInputField"
       data-testid="textInputTestID"
       onChange={[Function]}
+      placeholder="Enter Country"
       type="text"
       value="ind"
     />
