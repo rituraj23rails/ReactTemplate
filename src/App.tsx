@@ -1,16 +1,15 @@
 import { Routes, Route } from 'react-router-dom';
-import CountryHome from './app/screens/CountryHome/CountryHome';
-import CountryList from './app/screens/CountryList/CountryList';
-import CountryDetails from './app/screens/CountryDetails/CountryDetails';
+import StoryDetail from './app/screens/StoryDetail/StoryDetail';
+import ComponentJson from './app/screens/ComponentJson/ComponentJson';
+
 import './App.css';
 
 function App() {
   /* istanbul ignore next */
   return (
       <Routes>
-        <Route path='/' element={<CountryHome />} />
-        <Route path='countrylist' element={<CountryList />} />
-        <Route path='countrydetails' element={<CountryDetails />} />
+        <Route path='/' element={<StoryDetail />} />
+        <Route path='componentJson' element={<ComponentJson />} />
       </Routes>
   );
 }

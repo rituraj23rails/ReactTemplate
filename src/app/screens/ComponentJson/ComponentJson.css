@@ -1,0 +1,32 @@
+.jsonContainer {
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+    height: 100vh;
+}
+
+.rawData {
+    font-size: 14px;
+    color: #fff;
+    padding: 50px;
+    text-align: left;
+}
+
+@media screen and (max-width: 820px) {
+    .rawData {
+        font-size: 10px;
+        color: #fff;
+        padding: 50px;
+        text-align: left;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .rawData {
+        font-size: 8px;
+        color: #fff;
+        padding: 50px;
+        text-align: left;
+    }
+}

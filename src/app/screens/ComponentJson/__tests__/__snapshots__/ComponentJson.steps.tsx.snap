@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component JSON Screen User navigates Component JSON Screen 1`] = `
+<div
+  className="jsonContainer"
+>
+  <p
+    className="rawData"
+  />
+</div>
+`;
+
+exports[`Component JSON Screen User navigates Component JSON Screen 2`] = `
+<div
+  className="jsonContainer"
+>
+  <p
+    className="rawData"
+  />
+</div>
+`;

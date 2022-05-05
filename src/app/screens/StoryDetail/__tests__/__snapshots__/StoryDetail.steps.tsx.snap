@@ -1,0 +1,170 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Story Detail Screen User navigates Story Detail Screen 1`] = `
+<div
+  className="mainContainer"
+>
+  <div
+    className="formBox"
+  >
+    <p
+      className="headingText"
+    >
+      Story JSON App
+    </p>
+    <input
+      className="textInputField"
+      data-testid="textInputTestID"
+      onChange={[Function]}
+      placeholder="Search"
+      type="text"
+      value=""
+    />
+  </div>
+  <div
+    className="filterContainer"
+  >
+    <button
+      className="filterButtons"
+      data-testid="filterByCreatedAtButton"
+      onClick={[Function]}
+    >
+      <p
+        className="buttonText"
+      >
+        Filter_by
+        
+
+        created_at
+      </p>
+    </button>
+    <button
+      className="filterButtons"
+      data-testid="clearSearchAndFilterButton"
+      onClick={[Function]}
+    >
+      <p
+        className="buttonText"
+      >
+        Clear Search and Filter
+      </p>
+    </button>
+    <button
+      className="filterButtons"
+      data-testid="filterByTitleAtButton"
+      onClick={[Function]}
+    >
+      <p
+        className="buttonText"
+      >
+        Filter_by
+        
+
+        title
+      </p>
+    </button>
+  </div>
+  <div
+    className="listContainer"
+    onScroll={[Function]}
+  >
+    <button
+      className="cellContainer"
+      key=""
+      onClick={[Function]}
+    >
+      <p
+        className="dataKey"
+      >
+        Title: 
+      </p>
+      <p
+        className="dataKey"
+      >
+        URL: 
+      </p>
+      <p
+        className="dataKey"
+      >
+        Created at: 
+      </p>
+      <p
+        className="dataKey"
+      >
+        Author: 
+      </p>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Story Detail Screen User navigates Story Detail Screen 2`] = `
+<div
+  className="mainContainer"
+>
+  <div
+    className="formBox"
+  >
+    <p
+      className="headingText"
+    >
+      Story JSON App
+    </p>
+    <input
+      className="textInputField"
+      data-testid="textInputTestID"
+      onChange={[Function]}
+      placeholder="Search"
+      type="text"
+      value=""
+    />
+  </div>
+  <div
+    className="filterContainer"
+  >
+    <button
+      className="filterButtons"
+      data-testid="filterByCreatedAtButton"
+      onClick={[Function]}
+    >
+      <p
+        className="buttonText"
+      >
+        Filter_by
+        
+
+        created_at
+      </p>
+    </button>
+    <button
+      className="filterButtons"
+      data-testid="clearSearchAndFilterButton"
+      onClick={[Function]}
+    >
+      <p
+        className="buttonText"
+      >
+        Clear Search and Filter
+      </p>
+    </button>
+    <button
+      className="filterButtons"
+      data-testid="filterByTitleAtButton"
+      onClick={[Function]}
+    >
+      <p
+        className="buttonText"
+      >
+        Filter_by
+        
+
+        title
+      </p>
+    </button>
+  </div>
+  <div
+    className="listContainer"
+    onScroll={[Function]}
+  />
+</div>
+`;
