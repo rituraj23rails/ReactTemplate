@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Launching ParkingCharges ParkingCharges root file loads properly 1`] = `
+<div
+  className="chargesMainContainer"
+>
+  <p
+    className="regisrationText"
+  >
+    Car Registration No: 
+    111
+  </p>
+  <p
+    className="regisrationText"
+  >
+    Total Time: 
+    459578
+     hrs.
+  </p>
+  <p
+    className="regisrationText"
+  >
+    Total Charges: $
+    4595770
+  </p>
+  <button
+    className="submitButton"
+    data-testid="submitButtonTestID"
+    onClick={[Function]}
+  >
+    DEALLOCATE CAR
+  </button>
+</div>
+`;

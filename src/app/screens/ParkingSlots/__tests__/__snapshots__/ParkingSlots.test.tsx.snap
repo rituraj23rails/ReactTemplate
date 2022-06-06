@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Launching ParkingSlots ParkingSlots root file loads properly 1`] = `
+<div
+  className="slotMainContainer"
+>
+  <div
+    className="listContainer"
+  >
+    <div
+      className="slotCell"
+      data-testid="cellButtonTestID"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "green",
+        }
+      }
+    >
+      <p
+        className="availableText"
+      >
+        Available
+      </p>
+      <p
+        className="regisrationTextNo"
+      />
+    </div>
+    <div
+      className="slotCell"
+      data-testid="cellButtonTestID"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "green",
+        }
+      }
+    >
+      <p
+        className="availableText"
+      >
+        Available
+      </p>
+      <p
+        className="regisrationTextNo"
+      />
+    </div>
+  </div>
+  <input
+    className="textCarInputField"
+    data-testid="textInputTestID"
+    onChange={[Function]}
+    placeholder="Enter Car Registration No"
+    type="text"
+    value=""
+  />
+  <button
+    className="submitCarButton"
+    data-testid="submitButtonTestID"
+    onClick={[Function]}
+  >
+    CAR REGISTRATION
+  </button>
+</div>
+`;

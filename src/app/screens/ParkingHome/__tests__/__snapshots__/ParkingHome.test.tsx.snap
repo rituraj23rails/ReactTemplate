@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Launching ParkingHome ParkingHome root file loads properly 1`] = `
+<div
+  className="mainContainer"
+>
+  <div
+    className="formBox"
+  >
+    <p
+      className="headingText"
+    >
+      Welcome To Parking App
+    </p>
+    <input
+      className="textInputField"
+      data-testid="textInputTestID"
+      onChange={[Function]}
+      placeholder="Enter No of Slots"
+      type="text"
+      value=""
+    />
+    <button
+      className="submitButton"
+      data-testid="submitButtonTestID"
+      onClick={[Function]}
+    >
+      SUBMIT
+    </button>
+  </div>
+</div>
+`;

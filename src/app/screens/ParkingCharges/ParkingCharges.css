@@ -1,0 +1,22 @@
+.chargesMainContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.availableText {
+    font-size: 20px;
+    color: black;
+}
+
+.regisrationText {
+    font-size: 30px;
+    color: blue;
+    margin-top: 20px;
+}
+
+
+
+
